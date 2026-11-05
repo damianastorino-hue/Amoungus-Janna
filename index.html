@@ -99,8 +99,8 @@
 (()=>{
   const colors=['#ef5361','#57b9f4','#ffd166','#71d7a2','#bc83f5','#ff9e57','#58d7d2','#ec78bd','#a7c96b','#a8b8ce'];
   const names=['Rojo','Azul','Amarillo','Verde','Violeta','Naranja','Cian','Rosa','Lima','Gris'];
-  const rooms={Motor:{x:100,y:305},Navegación:{x:270,y:214},Comunicaciones:{x:270,y:397},Armería:{x:419,y:208},Escudos:{x:419,y:415},Cafetería:{x:476,y:309},Reactor:{x:624,y:208},Laboratorio:{x:624,y:415},O₂:{x:780,y:305}};
-  const graph={Motor:['Cafetería'],Navegación:['Armería','Cafetería'],Comunicaciones:['Escudos','Cafetería'],Armería:['Navegación','Reactor','Cafetería'],Escudos:['Comunicaciones','Laboratorio','Cafetería'],Cafetería:['Motor','Navegación','Comunicaciones','Armería','Escudos','Reactor','Laboratorio','O₂'],Reactor:['Armería','O₂','Cafetería'],Laboratorio:['Escudos','O₂','Cafetería'],O₂:['Reactor','Laboratorio','Motor','Cafetería']};
+  const rooms={Motor:{x:100,y:305},Navegación:{x:270,y:214},Comunicaciones:{x:270,y:397},Armería:{x:419,y:208},Escudos:{x:419,y:415},Cafetería:{x:476,y:309},Reactor:{x:624,y:208},Laboratorio:{x:624,y:415},"O₂":{x:780,y:305}};
+  const graph={Motor:['Cafetería'],Navegación:['Armería','Cafetería'],Comunicaciones:['Escudos','Cafetería'],Armería:['Navegación','Reactor','Cafetería'],Escudos:['Comunicaciones','Laboratorio','Cafetería'],Cafetería:['Motor','Navegación','Comunicaciones','Armería','Escudos','Reactor','Laboratorio','O₂'],Reactor:['Armería','O₂','Cafetería'],Laboratorio:['Escudos','O₂','Cafetería'],"O₂":['Reactor','Laboratorio','Motor','Cafetería']};
   const taskRooms=['Motor','Navegación','Comunicaciones','Armería','Escudos','Reactor','Laboratorio','O₂'];
   const $=id=>document.getElementById(id); let bots=[],tasks=[],events=[],corpses=[],timer=null,round=0,tick=0,speed=1,running=false,paused=false,meeting=false,ended=false,completed=0,killCooldown=0;
   const pick=a=>a[Math.floor(Math.random()*a.length)];
