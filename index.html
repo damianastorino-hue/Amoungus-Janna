@@ -208,9 +208,7 @@ window.gameApi={getState(){const hana=bots.find(b=>b.human);return {bots:bots.ma
       st.bots.filter(b=>b.alive&&!b.human).forEach((b,i)=>{const p=pos(b.room);drawAvatar(p.x+((i%3)-1)*.16,p.z+((Math.floor(i/3)%3)-1)*.14,b.color,b.name,w,h,scale,false)});drawAvatar(px,pz,'#ff71d1','Hana',w,h,scale,true);
       document.getElementById('threeRoom').textContent=st.hanaRoom||'En espera';drawMini(st);
     }requestAnimationFrame(frame);
-    const mapBtn=document.getElementById('mapViewBtn'),viewBtn=document.getElementById('threeViewBtn');
-    viewBtn.addEventListener('click',()=>{is3d=true;document.getElementById('threeView').hidden=false;document.getElementById('shipMap').style.display='none';document.getElementById('mapLegend').style.display='none';document.getElementById('moveChoices').style.display='none';mapBtn.classList.remove('active');viewBtn.classList.add('active')});
-    mapBtn.addEventListener('click',()=>{is3d=false;document.getElementById('threeView').hidden=true;document.getElementById('shipMap').style.display='block';document.getElementById('mapLegend').style.display='flex';document.getElementById('moveChoices').style.display='grid';mapBtn.classList.add('active');viewBtn.classList.remove('active')});
+
   }
 })();
 </script>
